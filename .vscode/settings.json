@@ -1,0 +1,9 @@
+{
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "sass.disableAutoIndent": false,
+    // "javascript.inlayHints.parameterNames.enabled": "all",
+//     "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+//     "javascript.inlayHints.variableTypes.enabled": true
+ }
