@@ -1,28 +1,16 @@
 {
   "heroes": [
     {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "wind"
-    },
-    {
-      "id": 3,
-      "name": "Морской герой",
-      "description": "Как аквамен, но не из DC",
+      "id": "e1ebe5b2-dbcc-4e69-a36a-cc0650a5c293",
+      "name": "asd",
+      "description": "asd",
       "element": "water"
     },
     {
-      "id": "3c08febb-019c-404f-8b4f-2270ce2ec736",
-      "name": "as",
-      "description": "sad",
+      "id": "96577e3b-a358-4f6d-a719-f4c7c97dc369",
+      "name": "sac",
+      "description": "zxc",
       "element": "fire"
-    },
-    {
-      "id": "f4b8813f-bec0-4f5c-80b3-13d92a78188c",
-      "name": "ss",
-      "description": "sss",
-      "element": "earth"
     }
   ],
   "filters": [

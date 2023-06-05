@@ -1,17 +1,13 @@
 import { useHttp } from '../../hooks/http.hook';
 import { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createSelector } from 'reselect';
-
-import {
-	// heroesFetching,
-	// heroesFetched,
-	// heroesFetchingError,
-	fetchHeroes,
-} from '../../actions';
-import { heroDeleted } from '../../actions';
+// import { createSelector } from 'reselect';
+import {createSelector} from '@reduxjs/toolkit'
+import { heroDeleted , fetchHeroes} from './heroesSlice';
+// import { fetchHeroes } from '../../actions';
 import HeroesListItem from '../heroesListItem/HeroesListItem';
 import Spinner from '../spinner/Spinner';
+
 
 const HeroesList = () => {
 	const filteredHeroesSelector = createSelector(
@@ -32,7 +28,7 @@ const HeroesList = () => {
 	const { request } = useHttp();
 
 	useEffect(() => {
-		dispatch(fetchHeroes(request));
+		dispatch(fetchHeroes());
 		// eslint-disable-next-line
 	}, []);
 

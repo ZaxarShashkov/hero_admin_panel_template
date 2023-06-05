@@ -1,7 +1,10 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import heroesReducer from '../reducers/heroes';
-import filtersReducer from '../reducers/filters';
+import { configureStore } from '@reduxjs/toolkit';
+// import heroesReducer from '../reducers/heroes';
+// import filtersReducer from '../reducers/filters';
+import heroesReducer from '../components/heroesList/heroesSlice';
+import filtersReducer from '../components/heroesFilters/filtersSlice'
 
 const stringMiddleware =
 	({ dispatch, getState }) =>
@@ -14,6 +17,12 @@ const stringMiddleware =
 		}
 		return next(action);
 	};
+
+const store = configureStore({
+	reducer: { heroesReducer , filtersReducer },
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(stringMiddleware),
+	devTools: process.env.NODE_ENV !== 'production',
+});
 
 // Enhancer
 // const enhancer =
@@ -33,14 +42,14 @@ const stringMiddleware =
 // 		return store;
 // 	};
 
-const store = createStore(
-	combineReducers({ heroesReducer, filtersReducer }),
-	compose(
-		applyMiddleware(ReduxThunk, stringMiddleware),
-		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-	)
+// const store = createStore(
+// 	combineReducers({ heroesReducer, filtersReducer }),
+// 	compose(
+// 		applyMiddleware(ReduxThunk, stringMiddleware),
+// 		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// 	)
 
-	// compose(enhancer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-);
+// 	// compose(enhancer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// );
 
 export default store;
