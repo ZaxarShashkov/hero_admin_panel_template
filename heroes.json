@@ -11,30 +11,47 @@
       "name": "asda",
       "description": "sd",
       "element": "water"
+    },
+    {
+      "id": "654df0a7-a7a1-4efc-93ec-429f16934fad",
+      "name": "asd",
+      "description": "asda",
+      "element": "wind"
+    },
+    {
+      "id": "4d558b20-2cad-481f-89c4-909e887bdce2",
+      "name": "dasda",
+      "description": "ad",
+      "element": "earth"
     }
   ],
   "filters": [
     {
+      "id": "all",
       "name": "all",
       "label": "Все",
       "className": "btn-outline-dark"
     },
     {
+      "id": "fire",
       "name": "fire",
       "label": "Огонь",
       "className": "btn-danger"
     },
     {
+      "id": "water",
       "name": "water",
       "label": "Вода",
       "className": "btn-primary"
     },
     {
+      "id": "wind",
       "name": "wind",
       "label": "Ветер",
       "className": "btn-success"
     },
     {
+      "id": "earth",
       "name": "earth",
       "label": "Земля",
       "className": "btn-secondary"
