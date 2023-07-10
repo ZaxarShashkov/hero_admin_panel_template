@@ -26,14 +26,13 @@ const HeroesAddForm = () => {
 			element: heroElement,
 		};
 
-		// Отправляем данные на сервер в формате JSON
-		// ТОЛЬКО если запрос успешен - отправляем персонажа в store
+
 		request('http://localhost:3001/heroes', 'POST', JSON.stringify(newHero))
 			.then((res) => console.log(res, 'Отправка успешна'))
 			.then(dispatch(heroCreated(newHero)))
 			.catch((err) => console.log(err));
 
-		// Очищаем форму после отправки
+		
 		setHeroName('');
 		setHeroDescr('');
 		setHeroElement('');
